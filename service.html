@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Services </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<nav class="nav nav_top">  <!--FIXING NAVIGATION BAR -->
+		<div class="logo">
+			<a href="index.html"><img src="https://www.1stop.ai/images/1Stop_logo_New_Png.png" width="150"></a>
+		</div>
+	
+		<div class="nav_side">
+			<a href="about.html">About US</a>
+			<a href="service.html">Services</a>
+			<a href="blog.html">Blog</a>
+			<a href="contact.html">Contact</a>
+			<a href=" ">Login/Register</a>
+			
+			
+		</div>
+	</nav>
+	
+	<div class="product" style="padding-top: 100px;">
+		<h2> Our Products </h2>
+		<div class="product-container" style="padding-bottom:50px;">
+			<div class="item">
+				<div class="item-img">
+					<img src="https://www.ikea.com/in/en/images/products/gammalbyn-3-seat-sofa-grey__0868926_pe781434_s5.jpg">
+				</div>
+				<div class="item-content">
+					<h3> Sofa </h3>
+					<p> Sofa is place where we sit </p>
+					<a href=""> Buy Now </a>
+				</div>
+			</div>
+	
+			<div class="item">
+				<div class="item-img">
+					<img src="https://d184tzdj06zb0d.cloudfront.net/images/1609410500soft-mattress.png">
+				</div>
+				<div class="item-content">
+					<h3> Matress </h3>
+					<p> Soft matress for conform sleep. </p>
+					<a href=""> Buy Now </a>
+				</div>
+			</div>
+		
+			<div class="item">
+				<div class="item-img">
+					<img src="https://m.media-amazon.com/images/I/418QpEn9JKL._SX425_.jpg">
+				</div>
+				<div class="item-content">
+					<h3> Wodden Chairs </h3>
+					<p> Oak wooden chairs for confortable sitting and dinning. </p>
+					<a href=""> Buy Now </a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+		
+	<br>
+	<hr>
+
+<div class="feed">
+	<h2> Your Feedback </h2>
+	<div class="feed-form">
+		<form name="submit-googlesheet" method="post">
+			<input type="text" name="Name" placeholder="Name"> <br>
+			<input type="email" name="Email" placeholder="Email Address"> <br>
+			<input type="number" name="Number" placeholder="Phone Number"> <br>
+			<textarea rows="5" cols="7" name="Review" placeholder="Write your review"> </textarea><br>
+			<button type="submit"> Submit </button>
+		</form>
+		
+	</div>
+	
+</div>
+
+<footer>
+	<div class="footer-logo">
+		<a href="index.html"><img src="https://www.1stop.ai/images/1Stop_logo_New_Png.png" width="150"></a>
+	<div class="pages">
+		<h3> Pages </h3>
+		<a href=""> About Us </a> |
+		<a href=""> Services </a> |
+		<a href=""> Blogs </a> |
+		<a href="">Login </a> |
+		<a href=""> Sign Up</a>
+	</div>
+
+	<div class="doc">
+		<h3> Documents </h3>
+		<a href=""> Privacy Policies </a> |
+		<a href=""> Terms of Use </a> |
+		<a href=""> Refund Policy </a> 
+	</div>
+
+	<div class="social">
+		<h3> Follow Us </h3>
+		<a href="https://www.facebook.com/ActorSonuSood" class="fa fa-facebook"></a>
+		<a href="https://twitter.com/SonuSood?s=20" class="fa fa-twitter"></a>
+		<a href="https://www.instagram.com/sonu_sood/" class="fa fa-instagram"></a>		
+	</div>
+
+	 
+	<hr>
+
+	<p> Copyright &copy; 2021 1stop.ai  All rights reserved </p>
+</footer>
+
+<script type="text/javascript">
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbys2yrhywcLCH4rA_xOfXspCJ-f3C_mT4F2fmhx5L28WuCVClFu2KVRp1o6aX9ipSDe/exec'
+	const form= document.forms['submit-googlesheet']
+	form.addEventListener('submit', e => {
+	e.preventDefault()
+	fetch(scriptURL, { method: 'POST', body: new FormData(form)}) .then(response => alert("Thanks for Contacting us.. We Will Contact You Soon...")) .catch(error => console.error('Error!', error.message))
+	})
+</script>
+</body>
+
+</html>
+
+
+
+
+
